@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Eulerlee</title>
+    <title>Linux下笔记本外接显示器 · Eulerlee</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href= "/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= "/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -201,14 +203,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Eulerlee</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Linux下笔记本外接显示器</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Eulerlee</a>
 </header>
@@ -227,7 +238,7 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-img" style="background-image: url(/intro/pixiv61432970.png)"></div>
@@ -236,8 +247,8 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Eulerlee
-            <!-- 文章页  -->
+            Linux下笔记本外接显示器
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -245,10 +256,53 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "display">display</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nvidia">nvidia</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">337</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/10/17</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -349,121 +403,55 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/10/17/Linux下笔记本外接显示器/" >
-            
-                <span>Linux下笔记本外接显示器</span>
-        </a>
-        <div class="abstract-content">
-            被垃圾主板坑了，笔记本的hdmi口是从独显接出来的，但是我的kali上又没有安装NVIDIA的官方驱动，所以显示器接上去没有反应。为了解决这个问题，先要安装NVIDIA的官方驱动，再修改xconfig以及xrandr的设置。
-安装NVIDIA驱动参见[TUTORIAL] Installing official NVIDIA driver in Optimus laptop
-1.禁用nouveau123echo -e "blacklist nouveau\noptions nouveau modeset=0\nalias nouveau off" &gt; /etc/modprobe.d/...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "display">display</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "nvidia">nvidia</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>被垃圾主板坑了，笔记本的hdmi口是从独显接出来的，但是我的kali上又没有安装NVIDIA的官方驱动，所以显示器接上去没有反应。为了解决这个问题，先要安装NVIDIA的官方驱动，再修改xconfig以及xrandr的设置。</p>
+<h2 id="安装NVIDIA驱动"><a href="#安装NVIDIA驱动" class="headerlink" title="安装NVIDIA驱动"></a>安装NVIDIA驱动</h2><p>参见<a href="https://forums.kali.org/showthread.php?35748-TUTORIAL-Installing-official-NVIDIA-driver-in-Optimus-laptop" target="_blank" rel="noopener">[TUTORIAL] Installing official NVIDIA driver in Optimus laptop</a><br></p>
+<h4 id="1-禁用nouveau"><a href="#1-禁用nouveau" class="headerlink" title="1.禁用nouveau"></a>1.禁用nouveau</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo -e "blacklist nouveau\noptions nouveau modeset=0\nalias nouveau off" &gt; /etc/modprobe.d/blacklist-nouveau.conf</span><br><span class="line"></span><br><span class="line">update-initramfs -u &amp;&amp; reboot</span><br></pre></td></tr></table></figure>
+<p>重启之后，确认第三方显卡驱动nouveau已经停止运行：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod |grep -i nouveau</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-安装NVIDIA驱动"><a href="#2-安装NVIDIA驱动" class="headerlink" title="2.安装NVIDIA驱动"></a>2.安装NVIDIA驱动</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install  nvidia-driver nvidia-xconfig</span><br></pre></td></tr></table></figure>
+<h4 id="3-获得主线id"><a href="#3-获得主线id" class="headerlink" title="3.获得主线id"></a>3.获得主线id</h4><p>双显卡需要修改xorg中的Bus id.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvidia-xconfig --query-gpu-info | grep 'BusID : ' | cut -d ' ' -f6</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-修改xorg-conf文件"><a href="#4-修改xorg-conf文件" class="headerlink" title="4.修改xorg.conf文件"></a>4.修改xorg.conf文件</h4><p>先运行nvidia-xconfig，生成xorg.conf文件<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvidia-xconfig</span><br></pre></td></tr></table></figure></p>
+<p>再修改 <strong>/etc/X11/xorg.conf</strong>，参见<a href="http://us.download.nvidia.com/XFree8...E/randr14.html" target="_blank" rel="noopener">http://us.download.nvidia.com/XFree8…E/randr14.html</a><br><br>将BusID改为先前得到的BusID.</p>
+<h4 id="5-根据Display-Managers修改配置文件"><a href="#5-根据Display-Managers修改配置文件" class="headerlink" title="5.根据Display Managers修改配置文件"></a>5.根据Display Managers修改配置文件</h4><p>参见[<a href="https://wiki.archlinux.org/index.php/NVIDIA_Optimus#Display_Managers][https://wiki.archlinux.org/index.php/NVIDIA_Optimus#Display_Managers]" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/NVIDIA_Optimus#Display_Managers][https://wiki.archlinux.org/index.php/NVIDIA_Optimus#Display_Managers]</a><br><br>我的图形界面是KDE，默认Display Managers是SSDM，故需要修改 <strong>/usr/share/sddm/scripts/Xsetup</strong>.<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xrandr --setprovideroutputsource modesetting NVIDIA-0</span><br><span class="line">xrandr --auto</span><br></pre></td></tr></table></figure></p>
+<h2 id="最后调整屏幕分辨率"><a href="#最后调整屏幕分辨率" class="headerlink" title="最后调整屏幕分辨率"></a>最后调整屏幕分辨率</h2><p>使用如下脚本<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/sh</span><br><span class="line">xrandr --newmode "1600x900_60.00"  118.25  1600 1696 1856 2112  900 903 908 934 -hsync +vsync</span><br><span class="line">xrandr --addmode eDP-1-1 "1600x900_60.00"</span><br><span class="line">xrandr --output eDP-1-1 --mode "1600x900_60.00"</span><br><span class="line">xrandr --output eDP-1-1 --right-of HDMI-0</span><br></pre></td></tr></table></figure></p>
+
     </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://eulerlee.github.io">Euler Lee</a>
+            <p>原文链接：<a href="https://eulerlee.github.io/2018/10/17/Linux下笔记本外接显示器/">https://eulerlee.github.io/2018/10/17/Linux下笔记本外接显示器/</a>
+            <p>发表日期：<a href="https://eulerlee.github.io/2018/10/17/Linux下笔记本外接显示器/">October 17th 2018, 5:37:14 pm</a>
+            <p>更新日期：<a href="https://eulerlee.github.io/2018/10/17/Linux下笔记本外接显示器/">October 17th 2018, 6:29:11 pm</a>
+            <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
     
     <!-- paginator  -->
-    
-</main>
-            <!-- profile -->
+    <ul class="post-paginator">
+        <li class="next">
             
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= /avatar/Cb0jvNaUUAA0InP.jpg >
-    <div class="profile-name">Euler Lee</div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
+        </li>
+        <li class="previous">
             
-                <a href="mailto:echo-"bGFzdHBvZXRAbWFpbC51c3RjLmVkdS5jbgo=" | base64 -d" class="iconfont-archer email" title=email ></a>
-            
-        
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-        
-            
-                <a href="https://github.com/EulerLee" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
     
-        
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
     
 
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-            
-                
-            
-                
-            
-        </div>
-    
-    
-</div>
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
             
         </div>
         <footer class="footer footer-unloaded">
@@ -539,6 +527,24 @@ height:50vh;
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装NVIDIA驱动"><span class="toc-number">1.</span> <span class="toc-text">安装NVIDIA驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-禁用nouveau"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.禁用nouveau</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-安装NVIDIA驱动"><span class="toc-number">1.0.2.</span> <span class="toc-text">2.安装NVIDIA驱动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-获得主线id"><span class="toc-number">1.0.3.</span> <span class="toc-text">3.获得主线id</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-修改xorg-conf文件"><span class="toc-number">1.0.4.</span> <span class="toc-text">4.修改xorg.conf文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-根据Display-Managers修改配置文件"><span class="toc-number">1.0.5.</span> <span class="toc-text">5.根据Display Managers修改配置文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后调整屏幕分辨率"><span class="toc-number">2.</span> <span class="toc-text">最后调整屏幕分辨率</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -666,6 +672,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
