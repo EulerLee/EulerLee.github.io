@@ -405,7 +405,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>被垃圾主板坑了，笔记本的hdmi口是从独显接出来的，但是我的kali上又没有安装NVIDIA的官方驱动，所以显示器接上去没有反应。为了解决这个问题，先要安装NVIDIA的官方驱动，再修改xconfig以及xrandr的设置。</p>
+        <p>被垃圾主板坑了，笔记本的hdmi口是从独显接出来的，但是我的kali上又没有安装NVIDIA的官方驱动，所以显示器接上去没有反应。为了解决这个问题，先要安装NVIDIA的官方驱动，再修改xconfig以及xrandr的设置。<br><a id="more"></a></p>
 <h3 id="安装NVIDIA驱动"><a href="#安装NVIDIA驱动" class="headerlink" title="安装NVIDIA驱动"></a>安装NVIDIA驱动</h3><p>参见<a href="https://forums.kali.org/showthread.php?35748-TUTORIAL-Installing-official-NVIDIA-driver-in-Optimus-laptop" target="_blank" rel="noopener">[TUTORIAL] Installing official NVIDIA driver in Optimus laptop</a><br></p>
 <h4 id="1-禁用nouveau"><a href="#1-禁用nouveau" class="headerlink" title="1.禁用nouveau"></a>1.禁用nouveau</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo -e "blacklist nouveau\noptions nouveau modeset=0\nalias nouveau off" &gt; /etc/modprobe.d/blacklist-nouveau.conf</span><br><span class="line"></span><br><span class="line">update-initramfs -u &amp;&amp; reboot</span><br></pre></td></tr></table></figure>
 <p>重启之后，确认第三方显卡驱动nouveau已经停止运行：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod |grep -i nouveau</span><br></pre></td></tr></table></figure></p>
@@ -423,7 +423,7 @@ height:50vh;
             <p>原文作者：<a href="https://eulerlee.github.io">Euler Lee</a>
             <p>原文链接：<a href="https://eulerlee.github.io/2018/10/17/Linux下笔记本外接显示器/">https://eulerlee.github.io/2018/10/17/Linux下笔记本外接显示器/</a>
             <p>发表日期：<a href="https://eulerlee.github.io/2018/10/17/Linux下笔记本外接显示器/">October 17th 2018, 5:37:14 pm</a>
-            <p>更新日期：<a href="https://eulerlee.github.io/2018/10/17/Linux下笔记本外接显示器/">October 17th 2018, 6:48:31 pm</a>
+            <p>更新日期：<a href="https://eulerlee.github.io/2018/10/17/Linux下笔记本外接显示器/">October 17th 2018, 6:50:38 pm</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
